@@ -121,7 +121,7 @@ module elasticui.controllers {
                 var promiseToAbort = this.searchPromise;
                 this.searchPromise = null;
                 promiseToAbort.abort();
-            }  
+            }
 
             this.indexVM.loading = true;
             this.searchPromise = this.getSearchPromise();

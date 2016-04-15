@@ -453,7 +453,13 @@ var elasticui;
         filters.filters.filter('euiTimestamp', TimestampFilter);
     })(filters = elasticui.filters || (elasticui.filters = {}));
 })(elasticui || (elasticui = {}));
-angular.module('elasticui.controllers', []).controller(elasticui.controllers);
+var elasticui;
+(function (elasticui) {
+    var controllers;
+    (function (_controllers) {
+        _controllers.controllers = angular.module('elasticui.controllers', []);
+    })(controllers = elasticui.controllers || (elasticui.controllers = {}));
+})(elasticui || (elasticui = {}));
 var elasticui;
 (function (elasticui) {
     var controllers;
@@ -848,7 +854,7 @@ var elasticui;
         services.services.service('es', ElasticService);
     })(services = elasticui.services || (elasticui.services = {}));
 })(elasticui || (elasticui = {}));
-angular.module('elasticui', ['elasticsearch', 'elasticui.filters', 'elasticui.controllers', 'elasticui.services', 'elasticui.directives', 'elasticui.widgets.directives']);
+angular.module('elasticui', ['elasticsearch', 'elasticui.filters', 'elasticui.controllers', 'elasticui.services', 'elasticui.directives', 'elasticui.widgets.directives', 'ngSanitize']);
 var elasticui;
 (function (elasticui) {
     var widgets;
